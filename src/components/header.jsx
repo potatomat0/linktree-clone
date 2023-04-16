@@ -35,7 +35,7 @@ const PageHeader = ({ language, setLanguage }) => {
 
   return (
     <header className="flex relative flex-col items-center justify-center p-4 mt-36 header-container ">
-    <div className="w-40 h-40 rounded-full bg-gray-300 flex items-center justify-center md:w-32 md:h-32 lg:w-40 lg:h-40">
+    <div className="w-40 h-40 rounded-full bg-white flex items-center justify-center md:w-32 md:h-32 lg:w-40 lg:h-40">
       <img className="rounded-full" src={logo} alt="Logo" />
     </div>
     <p className="flex my-6 font-bold text-center md:text-lg lg:text-xl"> 

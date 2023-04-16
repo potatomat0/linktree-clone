@@ -5,6 +5,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import './Cards.css';
 import 'tailwindcss/tailwind.css';
 
+
 const Card = ({
   title,
   backgroundClass,
