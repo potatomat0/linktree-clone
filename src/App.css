@@ -4,9 +4,9 @@ body {
   font-family: 'Courier New', monospace;
   background-color: #7fbc8c;
   font-size: 1.2em;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 0;
   cursor: url(../src/assets/cursor.png), auto;

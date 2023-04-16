@@ -53,35 +53,40 @@
   position: relative;
   overflow: hidden;
   font-size: 130%;
+  border: var(--borderColor) 4px dashed;
+  background-color: var(--cardBackground) ;
+  box-shadow: var(--shadow);
 }
+
+.card:hover {
+  transform: scale(1.05);
+  filter: invert(1);
+}
+
 
 .card__goodreads {
   background-image: radial-gradient(var(--goodreads) 1px, transparent 2px);
   background-size: 40px 40px;
-  background-color: var(--cardBackground);
-  box-shadow: var(--shadow);
-  border: var(--borderColor) 4px dashed;
+  
+  
 }
 .card__instagram {
   background-image: radial-gradient(var(--instagram) 1px, transparent 2px);
   background-size: 40px 40px;
-  background-color: var(--cardBackground) ;
-  box-shadow: var(--shadow);
-  border: var(--borderColor) 4px dashed;
+  
+  
 }
 .card__rateyourmusic {
   background-image: radial-gradient( var(--rateYourMusic) 1px, transparent 2px);
   background-size: 40px 40px;
-  background-color: var(--cardBackground);
-  box-shadow: var(--shadow);
-  border: var(--borderColor) 4px dashed;
+  
+  
 }
 .card__imdb {
   background-image: radial-gradient( var(--imdb) 1px, transparent 2px);
   background-size: 40px 40px;
-  background-color: var(--cardBackground);
-  box-shadow: var(--shadow);
-  border: var(--borderColor) 4px dashed;
+  
+  
 }
 
 .card__active {
@@ -161,11 +166,6 @@
   font-size: 1rem;
   display: none;
 }
-
-.unclickable {
-  pointer-events: none;
-}
-
 
 .card-icon .fa-angle-down {
   transition: transform 0.5s;

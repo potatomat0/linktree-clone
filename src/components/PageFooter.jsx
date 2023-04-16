@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='absolute' style={{ marginTop: '50px', textAlign: 'center' }}>
-      Made with bugs and frustration by an incompetent developer
+    <footer className='font-bold text-center mt-16'>
+      Made with bugs and frustrations
     </footer>
   );
 };

@@ -52,7 +52,7 @@ const PageHeader = ({ language, setLanguage }) => {
           className="p-2 rounded-full font-bold hover:bg-black hover:text-white"
           onClick={handleLanguageToggle}
         >
-          {language === 'en' ? 'VI' : 'EN'}
+          {language === 'en' ? 'EN' : 'VI'}
         </button>
         <a
           href="https://github.com/potatomat0/linktree-clone"
