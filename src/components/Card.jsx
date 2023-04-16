@@ -1,27 +1,48 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "./Cards.css"
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import './Cards.css';
+import 'tailwindcss/tailwind.css';
 
-const Card = ({ title, backgroundClass, icon, link, contents }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleCardClick = () => {
-    setIsActive(!isActive);
-  };
-
+const Card = ({
+  title,
+  backgroundClass,
+  icon,
+  link,
+  contents,
+  isActive,
+  onCardClick,
+}) => {
   return (
-    <div className={`card ${backgroundClass} ${isActive ? 'card__active' : ''}`} onClick={handleCardClick}>
+    <div
+      className={`card ${backgroundClass} ${isActive ? 'card__active' : ''
+        } w-full sm:w-auto`}
+      onClick={onCardClick}
+    >
       <div className="card-content">
-        <div className="card-icon">
-          <p className="unclickable">{title}</p>
+        <div className="card-icon flex items-center justify-between">
+          <FontAwesomeIcon icon={faAngleDown} />
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={link}
+            className="text-lg font-semibold"
+          >
+            {title}
+          </a>
           <div>
             <a target="_blank" rel="noopener noreferrer" href={link}>
-              <FontAwesomeIcon icon={icon} aria-hidden="true"></FontAwesomeIcon>
+              <FontAwesomeIcon
+                icon={icon}
+                aria-hidden="true"
+                className="text-xl"
+              ></FontAwesomeIcon>
             </a>
           </div>
         </div>
         {isActive && (
-          <div className="additional-content">
+          <div className="additional-content mt-4 text-md">
             {contents}
           </div>
         )}

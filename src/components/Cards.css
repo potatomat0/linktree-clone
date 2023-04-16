@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --cardBackground: #9723c9;;
+  --white: #ffffff;
+}
 
 .wrapper {
   flex: 1;
@@ -20,8 +24,8 @@
   width: 500px;
   color: white;
   border-radius: 0px;
-  padding: 1rem 2rem;
-  margin: 2rem;
+  /* padding: 1rem 2rem; */
+  /* margin: 2rem; */
   cursor: pointer;
   height: 50px;
   transition: all 0.3s ease-in-out;
@@ -31,17 +35,23 @@
 }
 
 .card__goodreads {
-  background: #9723c9;
+  background-image: radial-gradient(#ffff80 1px, transparent 2px);
+  background-size: 40px 40px;
+  background-color: #9723c9;
   box-shadow: 10px 10px black;
   border: white 4px dashed;
 }
 .card__instagram {
-  background: #9723c9;
+  background-image: radial-gradient(#ff80bf 4px, transparent 4px);
+  background-size: 40px 40px;
+  background-color: #9723c9 ;
   box-shadow: 10px 10px black;
   border: white 4px dashed;
 }
 .card__rateyourmusic {
-  background: #9723c9;
+  background-image: radial-gradient(#9580ff 1px, transparent 2px);
+  background-size: 40px 40px;
+  background-color: #9723c9;
   box-shadow: 10px 10px black;
   border: white 4px dashed;
 }
@@ -53,7 +63,6 @@
 
 .card__active {
   height: 300px;
-  transform: scale(101%);
 }
 
 .card::before {
@@ -85,14 +94,14 @@
   justify-content: space-between ;
   margin: 0 auto;
   /* gap: 0px 200px; */
-  padding: 0.8rem;
+  padding: 1rem;
 
   transition: all 1s ease-in-out;
 }
 
 .card__active > div {
   margin: 0;
-  padding: 0.8rem 1.5rem;
+  /* padding: 0.8rem 1.5rem; */
 }
 
 .card__active .card-icon {
@@ -102,7 +111,7 @@
   transform: translateX(-50%);
 }
 
-.card__active .additional-content {
+.card__active ~ .additional-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -120,24 +129,20 @@
   font-size: 1.6rem;
 }
 
-additional-content {
-  display: block;
-
-
-}
-
-
-@media (max-width: 430px) {
-}
-
-@media (max-width: 620px) {
-
-}
-
-@media (max-width: 768px) {
-  
+.additional-content {
+  font-size: 1rem;
+  display: none;
 }
 
 .unclickable {
   pointer-events: none;
+}
+
+
+.card-icon .fa-angle-down {
+  transition: transform 0.5s;
+}
+
+.card__active .card-icon .fa-angle-down {
+  transform: rotate(180deg);
 }

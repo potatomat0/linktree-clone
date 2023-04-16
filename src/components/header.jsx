@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/logo.jpg';
+import './Header.css';
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,12 +18,14 @@ const Header = () => {
   };
 
   return (
-    <header className="flex flex-col items-center justify-center p-4">
-      <div className="w-40 h-40 rounded-full bg-gray-300 flex items-center justify-center">
-        <img className="rounded-full" src={logo} alt="Logo" />
-      </div>
-    <p className="flex my-4"> Tôi chỉ là một con mọt tiêu thụ nội dung thôi aaaa </p>
-      <div className="flex mt-8 space-x-4">
+    <header className="flex flex-col items-center justify-center p-4 header-container">
+    <div className="w-40 h-40 rounded-full bg-gray-300 flex items-center justify-center md:w-32 md:h-32 lg:w-40 lg:h-40">
+      <img className="rounded-full" src={logo} alt="Logo" />
+    </div>
+    <p className="flex my-4 text-white font-bold text-center md:text-lg lg:text-xl"> 
+      Tôi chỉ là con mọt tiêu thụ nội dung thôi aaaa 
+    </p>
+    <div className="flex mt-8 space-x-4">
         <button
           className="p-2 rounded-full hover:bg-gray-200"
           onClick={handleDarkModeToggle}
