@@ -1,8 +1,9 @@
 # những nhiệm vụ đề ra:
-- thêm nội dung cho từng accordion 
-- customize giao diện cho từng accordion 
-- refactor các components
-- thêm footer
+- (done)thêm nội dung cho từng accordion 
+- (done)customize giao diện cho từng accordion 
+- (done)refactor các components
+- (done)thêm footer
 - thêm p5js scripts để tạo hiệu ứng 
-- thêm nội dung giới thiệu trang web
-- thêm chức năng darkmode   
+- (kinda done?) thêm nội dung giới thiệu trang web
+- (done) thêm chức năng darkmode 
+- thêm chức năng hover cho từng accordion  

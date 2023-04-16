@@ -5,8 +5,27 @@
 }
 
 :root {
-  --cardBackground: #9723c9;;
-  --white: #ffffff;
+  /* Light mode colors */
+  --cardBackground: #d18def;
+  --goodreads: #f0f028;
+  --instagram: #ac1c64;
+  --rateYourMusic: #6a50eb;
+  --imdb: #ffffff;
+  --textColor: black;
+  --borderColor: white;
+  --shadow: 10px 10px black;
+}
+
+.dark-mode {
+  /* Dark mode colors */
+  --cardBackground: #333;
+  --imdb: grey;
+  --goodreads: #efef59;
+  --instagram: #f172b1;
+  --rateYourMusic: #816bef;
+  --borderColor: #d18def;
+  --textColor: white;
+  --shadow: -10px 10px white;
 }
 
 .wrapper {
@@ -22,7 +41,9 @@
 
 .card {
   width: 500px;
-  color: white;
+  max-width: 500px;
+  min-width: 500px;
+  color: var(--textColor);
   border-radius: 0px;
   /* padding: 1rem 2rem; */
   /* margin: 2rem; */
@@ -35,35 +56,38 @@
 }
 
 .card__goodreads {
-  background-image: radial-gradient(#ffff80 1px, transparent 2px);
+  background-image: radial-gradient(var(--goodreads) 1px, transparent 2px);
   background-size: 40px 40px;
-  background-color: #9723c9;
-  box-shadow: 10px 10px black;
-  border: white 4px dashed;
+  background-color: var(--cardBackground);
+  box-shadow: var(--shadow);
+  border: var(--borderColor) 4px dashed;
 }
 .card__instagram {
-  background-image: radial-gradient(#ff80bf 4px, transparent 4px);
+  background-image: radial-gradient(var(--instagram) 1px, transparent 2px);
   background-size: 40px 40px;
-  background-color: #9723c9 ;
-  box-shadow: 10px 10px black;
-  border: white 4px dashed;
+  background-color: var(--cardBackground) ;
+  box-shadow: var(--shadow);
+  border: var(--borderColor) 4px dashed;
 }
 .card__rateyourmusic {
-  background-image: radial-gradient(#9580ff 1px, transparent 2px);
+  background-image: radial-gradient( var(--rateYourMusic) 1px, transparent 2px);
   background-size: 40px 40px;
-  background-color: #9723c9;
-  box-shadow: 10px 10px black;
-  border: white 4px dashed;
+  background-color: var(--cardBackground);
+  box-shadow: var(--shadow);
+  border: var(--borderColor) 4px dashed;
 }
 .card__imdb {
-  background: #9723c9;
-  box-shadow: 10px 10px black;
-  border: white 4px dashed;
+  background-image: radial-gradient( var(--imdb) 1px, transparent 2px);
+  background-size: 40px 40px;
+  background-color: var(--cardBackground);
+  box-shadow: var(--shadow);
+  border: var(--borderColor) 4px dashed;
 }
 
 .card__active {
   height: 300px;
 }
+
 
 .card::before {
   content: "";
@@ -76,7 +100,7 @@
 }
 
 .card-content {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -89,7 +113,7 @@
 .card-content > div {
   display: flex;
   flex-direction: row;
-  max-width: 700px;
+  max-width: 500px;
   align-items: center;
   justify-content: space-between ;
   margin: 0 auto;
@@ -120,9 +144,13 @@
 
 
 .card-icon {
-  color: white;
+  color: black;
   width: 100%;
   height: 2rem;
+}
+
+.dark-mode .card-icon {
+  filter: invert(1);
 }
 
 .card-icon .las {

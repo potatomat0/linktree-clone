@@ -5,7 +5,7 @@ import { faGoodreads, faImdb, faInstagram } from '@fortawesome/free-brands-svg-i
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import ContentComponent from './ContentComponent';
 
-const CardsHolder = () => {
+const CardsHolder = ({language}) => {
   const [activeCard, setActiveCard] = useState(null);
 
   const handleCardClick = (index) => {
@@ -23,30 +23,49 @@ const CardsHolder = () => {
           title="IMDB" backgroundClass="card__imdb"
           icon={faImdb}
           link="https://www.imdb.com/user/ur85082594/"
-          contents={<ContentComponent userId='wingedbeast-66524' favorites=' Céline Sciamma - Portrait of a Lady on Fire (2020), Shinji Aoyama - Eureka (2000),  Elem Klimov - Come and See (1985)' />}
+          contents={
+            <ContentComponent
+              userId='wingedbeast-66524'
+              favorites=' Céline Sciamma - Portrait of a Lady on Fire (2020), Shinji Aoyama - Eureka (2000),  Elem Klimov - Come and See (1985)'
+              language={language}
+            />}
           isActive={activeCard === 0}
           onCardClick={() => handleCardClick(0)}
         />
         <Card
-          title="Rateyourmusic"
+          title="rateyourmusic"
           backgroundClass="card__rateyourmusic"
           icon={faMusic} link="https://rateyourmusic.com/~potatomat0"
-          contents={<ContentComponent userId="@potatomat0" favorites="Kayo Dot - Choirs of The Eyes, Opeth - Black Waterpark, Bark Psychosis - ///Codename:Dustsucker" />}
+          contents={
+            <ContentComponent
+              userId="@potatomat0"
+              favorites="Kayo Dot - Choirs of The Eyes, Opeth - Black Waterpark, Bark Psychosis - ///Codename:Dustsucker"
+              language={language}
+            />}
           isActive={activeCard === 1}
           onCardClick={() => handleCardClick(1)} />
         <Card
-          title="Good Reads"
+          title="goodreads"
           backgroundClass="card__goodreads"
           icon={faGoodreads}
           link="https://www.goodreads.com/user/show/88981685-hoang-nh-t"
-          contents={<ContentComponent userId='@trouted' favorites='i hate books' />}
+          contents={
+            <ContentComponent
+              userId='@trouted'
+              favorites='none 🤢'
+              language={language}
+            />}
           isActive={activeCard === 2}
           onCardClick={() => handleCardClick(2)} />
         <Card
-          title="Instagram"
+          title="instagram"
           backgroundClass="card__instagram"
           icon={faInstagram} link="https://www.instagram.com/kappa_scute/"
-          contents={<ContentComponent userId='@kappa_scute' />}
+          contents={
+            <ContentComponent
+              userId='@kappa_scute'
+              language={language}
+            />}
           isActive={activeCard === 3}
           onCardClick={() => handleCardClick(3)}
         />
