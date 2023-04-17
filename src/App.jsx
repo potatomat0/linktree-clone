@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PageBody from './components/body';
 import CardsHolder from './components/CardsHolder';
 import Header from './components/header';
@@ -8,9 +8,10 @@ import Perlin from './components/Perlin';
 
 function App() {
   const [language, setLanguage] = useState('en');
+  
   return (
     <PageBody>
-     <Perlin></Perlin>
+     <Perlin id="my-canvas"></Perlin>
       <Header language={language} setLanguage={setLanguage}></Header>
       <CardsHolder language={language} />
       <Footer />

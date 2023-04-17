@@ -22,6 +22,10 @@ const Perlin = () => {
       p.frameRate(24);
       // p.clear();
     };
+    // https://p5js.org/reference/#/p5/resizeCanvas
+    p.windowResized = () => {
+      p.resizeCanvas(p.windowWidth, p.windowHeight);
+    }
 
     p.draw = () => {
       p.background(0,0,0, 200);

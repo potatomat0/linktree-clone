@@ -18,7 +18,7 @@ const Card = ({
   return (
     <div
       className={`card ${backgroundClass} ${isActive ? 'card__active' : ''
-        } w-full sm:w-auto`}
+        }`}
       onClick={onCardClick}
     >
       <div className="card-content">
