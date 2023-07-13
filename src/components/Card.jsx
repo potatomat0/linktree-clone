@@ -28,7 +28,7 @@ const Card = ({
             target="_blank"
             rel="noopener noreferrer"
             href={link}
-            className="text-lg font-semibold"
+            className="text-lg font-semibold px-5"
           >
             {title}
           </a>

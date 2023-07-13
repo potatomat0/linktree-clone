@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className='font-bold text-center mt-16'>
-      Made with bugs and frustrations
+      Nhat Kappa Hoang 2023 
     </footer>
   );
 };

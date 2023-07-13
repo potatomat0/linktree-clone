@@ -18,7 +18,7 @@ const Perlin = () => {
         particles.push(p.createVector(p.random(p.width), p.random(p.height)));
       }
       p.stroke(70, 12, 104);
-      p.strokeWeight(1.7);
+      p.strokeWeight(1.3);
       p.frameRate(24);
       // p.clear();
     };

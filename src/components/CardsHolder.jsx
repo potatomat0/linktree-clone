@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Card from './Card';
 import './Cards.css';
-import { faGoodreads, faImdb, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faGoodreads, faImdb, faInstagram, faItchIo } from '@fortawesome/free-brands-svg-icons';
+import { faMusic, faSquareRss, faPencil, faPen} from '@fortawesome/free-solid-svg-icons';
 import ContentComponent from './ContentComponent';
 
 const CardsHolder = ({language}) => {
@@ -17,8 +17,20 @@ const CardsHolder = ({language}) => {
   };
 
   return (
-    <div className="container mx-auto px-4 md:px-8">
+    <div className="container flex w-auto justify-center px-4 md:px-8">
       <div className="cards grid grid-cols-1 sm:grid-row-4 lg:grid-row-4 gap-7">
+        <Card
+          title="some goofy sketches" backgroundClass="card__other"
+          icon={faPencil}
+          link="https://openprocessing.org/user/310786/"
+          contents={
+            <ContentComponent
+              additional={'i write goofy p5js sketches on open processings'}
+              language={language}
+            />}
+          isActive={activeCard === 6}
+          onCardClick={() => handleCardClick(6)}
+        />
         <Card
           title="IMDB" backgroundClass="card__imdb"
           icon={faImdb}
@@ -52,7 +64,7 @@ const CardsHolder = ({language}) => {
           contents={
             <ContentComponent
               userId='@trouted'
-              favorites='none 🤢'
+              favorites='none'
               language={language}
             />}
           isActive={activeCard === 2}
@@ -68,6 +80,30 @@ const CardsHolder = ({language}) => {
             />}
           isActive={activeCard === 3}
           onCardClick={() => handleCardClick(3)}
+        />
+        <Card
+          title="personal blog"
+          backgroundClass="card__other"
+          icon={faSquareRss} link="https://potatomat0.github.io"
+          contents={
+            <ContentComponent
+              additional={'i write random unhinged non-computer-science-related contents'}
+              language={language}
+            />}
+          isActive={activeCard === 4}
+          onCardClick={() => handleCardClick(4)}
+        />
+        <Card
+          title="some random indie games idk"
+          backgroundClass="card__other"
+          icon={faItchIo} link="https://itch.io/c/2496079/random-games-idk"
+          contents={
+            <ContentComponent
+              additional={'i write random unhinged non-computer-science-related contents'}
+              language={language}
+            />}
+          isActive={activeCard === 5}
+          onCardClick={() => handleCardClick(5)}
         />
       </div>
     </div>

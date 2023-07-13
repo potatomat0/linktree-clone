@@ -26,7 +26,7 @@ const PageHeader = ({ language, setLanguage }) => {
 
   const textContent = {
     en: {
-      title: "I'm literally just a full time media consumer",
+      title: "it’s easier to imagine the end of the world than the end of capitalism",
     },
     vn: {
       title: 'Tôi chỉ là con mọt tiêu thụ nội dung aaaaaaaa',
@@ -42,7 +42,7 @@ const PageHeader = ({ language, setLanguage }) => {
           <img className="rounded-full " src={logo} alt="Logo" />
         </a>
       </div>
-      <p className="flex my-6 font-bold text-center md:text-lg lg:text-xl">
+      <p className="flex my-6 font-bold md:text-lg lg:text-xl">
         {textContent[language].title}
       </p>
       <div className="flex space-x-4">
@@ -50,7 +50,7 @@ const PageHeader = ({ language, setLanguage }) => {
           className="p-2 rounded-full hover:bg-black hover:text-white"
           onClick={handleDarkModeToggle}
         >
-          <FontAwesomeIcon className="button-icon" icon={darkMode ? faMoon : faSun} size='2x' />
+          <FontAwesomeIcon icon={darkMode ? faMoon : faSun} size='2x' />
         </button>
         <button
           className="p-2 rounded-full font-bold text-2xl hover:bg-black hover:text-white"
